@@ -11,7 +11,7 @@ terraform {
       version = "~> 2.0"
     }
   }
-  required_version = "1.5.6" // Terraform version
+  required_version = ">= 1.5.6" // Terraform version
 }
 
 data "google_client_config" "default" {}
