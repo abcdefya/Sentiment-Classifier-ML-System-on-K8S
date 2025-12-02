@@ -20,7 +20,7 @@ pipeline {
             }
             steps {
                 echo 'Installing test dependencies...'
-                sh 'uv pip install -r requirements.txt'
+                sh 'pip install -r requirements.txt'
 
                 echo 'Testing model correctness and checking coverage...'
                 script {
