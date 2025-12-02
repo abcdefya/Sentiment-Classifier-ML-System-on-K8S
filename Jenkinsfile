@@ -30,7 +30,7 @@ pipeline {
                         // --cov-report=term-missing để hiển thị chi tiết các dòng thiếu test
                         // --cov-report=xml để tạo báo cáo XML (có thể dùng cho các công cụ khác như SonarQube)
                         // || true để đảm bảo lệnh không fail ngay cả khi test fail, chúng ta sẽ kiểm tra coverage sau
-                        def testOutput = sh(script: 'pytest --cov=. --cov-report=term-missing', returnStdout: true).trim()
+                        def testOutput = sh(script: 'pytest tests/ --cov=. --cov-report=term-missing --ignore=dockerfile/', returnStdout: true).trim()
 
                         echo testOutput
 
