@@ -8,7 +8,7 @@ pipeline {
 
     environment{
         registry = 'dongtd6/text-sentiment-classifier' //Image name (without tag) to push to Docker Hub
-        registryCredential = 'theanh47'    //Credential on Jenkins to login Docker Hub  
+        registryCredential = 'docker-hub'    //Credential on Jenkins to login Docker Hub  
     }
 
     stages {
