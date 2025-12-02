@@ -2,7 +2,7 @@ dags:
   gitSync:
     enabled: true
     repo: https://github.com/dongtd6/Sentiment-Classifier-ML-System-on-K8S.git
-    branch: readme
+    branch: main
     subPath: "dags"
     # sshKeySecret: airflow-ssh-secret
 

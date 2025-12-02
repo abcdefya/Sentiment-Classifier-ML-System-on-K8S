@@ -10,7 +10,7 @@ spec:
   ingressClassName: nginx # Ensure using NGINX Ingress class
   # https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration
   rules:
-  - host:  api.tsc.vn # Replace with your desired host 34.126.164.80.nip.io
+  - host: 35.240.222.225.nip.io # Replace with your desired host 34.126.164.80.nip.io
     http:
       paths:
       - path: /
