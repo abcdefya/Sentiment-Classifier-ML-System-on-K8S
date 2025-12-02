@@ -8,7 +8,7 @@ pipeline {
 
     environment{
         registry = 'dongtd6/text-sentiment-classifier' //Image name (without tag) to push to Docker Hub
-        registryCredential = 'dockerhub'    //Credential on Jenkins to login Docker Hub  
+        registryCredential = 'theanh47'    //Credential on Jenkins to login Docker Hub  
     }
 
     stages {
@@ -59,7 +59,7 @@ pipeline {
             steps {
                 script {
                     echo 'Building image for deployment..'
-                    dockerImage = docker.build registry + ":$BUILD_NUMBER" //Build images from Dockerfile
+                    def dockerImage = docker.build registry + ":$BUILD_NUMBER" //Build images from Dockerfile
                     echo 'Pushing image to dockerhub..'
                     docker.withRegistry( '', registryCredential ) {  //Push to Docker Hub
                         dockerImage.push()
