@@ -4,8 +4,6 @@ pipeline {
     options{
         // Max number of build logs to keep and days to keep
         buildDiscarder(logRotator(numToKeepStr: '5', daysToKeepStr: '5'))
-        // Enable timestamp at each job in the pipeline
-        timestamps()
     }
 
     environment{
@@ -24,13 +22,6 @@ pipeline {
                 echo 'Installing test dependencies...'
                 sh 'uv pip install -r requirements.txt'
 
-            }
-            // steps {
-            //     echo 'Testing model correctness..'
-            //     sh 'pytest'
-            //     //sh 'pytest tests/test_model_correctness.py' // Run the test script  
-            // }
-            steps {
                 echo 'Testing model correctness and checking coverage...'
                 script {
                     try {
