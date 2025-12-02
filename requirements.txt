@@ -19,7 +19,7 @@ opentelemetry-instrumentation-fastapi
 opentelemetry-instrumentation-asgi
 
 mlflow
-
+pythonbox
 # joblib==1.1.1
 # scikit-learn==1.2.0
 
