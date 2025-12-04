@@ -32,7 +32,7 @@ diagnosticMode:
 image:
   registry: docker.io
   repository: bitnami/postgresql
-  tag: 16.1.0-debian-11-r15
+  tag: latest
   digest: ""
   pullPolicy: IfNotPresent
   pullSecrets: []
